@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function Home() {
 
   useEffect(() => {
-  fetch("http://localhost:5000/api/test")
+ fetch(`${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/test`)
     .then((response) => response.json())
     .then((data) => {
       console.log("Backend Response:", data);
